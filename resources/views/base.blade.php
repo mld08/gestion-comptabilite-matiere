@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gestion Stock</title>
+  <title>Gestion Comptabilité Matière</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('assets/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('assets/css/styles.min.css')}}" />
   <link rel="stylesheet" href="{{asset('assets/css/tom-select.css')}}" />
@@ -31,8 +31,8 @@
       <div>
 
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="" class="text-nowrap logo-img">
-                <h2>Gestion Stock</h2>
+            <a href="" class="text-center ">
+                <h1 class="fs-6">Gestion Comptabilité Matière</h1>
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                 <i class="ti ti-x fs-8"></i>
@@ -58,14 +58,6 @@
                     <span class="hide-menu">Pages</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.produit.index')}}" aria-expanded="false">
-                        <span>
-                        <i class="ti ti-package"></i>
-                        </span>
-                        <span class="hide-menu">Produits</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
                     <a class="sidebar-link" href="{{route('admin.carburant.index')}}" aria-expanded="false">
                         <span>
                         <i class="ti ti-barrel"></i>
@@ -87,6 +79,30 @@
                         <i class="ti ti-asset"></i>
                         </span>
                         <span class="hide-menu">Grand Livre des Comptes</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{route('admin.matiere.index')}}" aria-expanded="false">
+                        <span>
+                        <i class="ti ti-asset"></i>
+                        </span>
+                        <span class="hide-menu">Journal des Matieres</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{route('admin.materiel.index')}}" aria-expanded="false">
+                        <span>
+                        <i class="ti ti-asset"></i>
+                        </span>
+                        <span class="hide-menu">Matériels informatiques</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{route('admin.produit.index')}}" aria-expanded="false">
+                        <span>
+                        <i class="ti ti-package"></i>
+                        </span>
+                        <span class="hide-menu">Produits</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

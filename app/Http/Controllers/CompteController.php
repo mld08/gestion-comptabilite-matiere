@@ -29,7 +29,7 @@ class CompteController extends Controller
      */
     public function create()
     {
-        $compte = New Compte();
+        $compte = new Compte();
         return view('compte.form', [
             'compte'=> $compte
         ]);
