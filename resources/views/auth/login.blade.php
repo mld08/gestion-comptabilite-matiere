@@ -124,16 +124,17 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
-        <h3>Gestion Comptabilité Matière</h3>
+    <form method="POST" action="{{route('login')}}">
+        @csrf
+        <h3>Administrator Login</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Username" id="username">
+        <label for="name">Username</label>
+        <input type="text" placeholder="Username" id="name" name="name">
 
         <label for="password">Mot de passe</label>
         <input type="password" placeholder="*****" id="password" name="password">
 
-        <button>Log In</button>
+        <button type="submit">Se connecter</button>
     </form>
 </body>
 

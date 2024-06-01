@@ -12,7 +12,7 @@
                         <a class="btn btn-primary" href="{{route('admin.materiel.create')}}">Ajouter un matériel</a>
                     </div>
                     <div class="col-lg-3 text-end">
-                        <a class="btn btn-success" href="{{route('export.materiel')}}">Exporter en excel</a>
+                        <a class="btn btn-success" href="{{route('admin.export.materiel')}}">Exporter en excel</a>
                     </div>
 
                 </div>

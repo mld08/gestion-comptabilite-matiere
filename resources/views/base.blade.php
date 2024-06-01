@@ -8,6 +8,7 @@
   <link rel="shortcut icon" type="image/png" href="{{asset('assets/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('assets/css/styles.min.css')}}" />
   <link rel="stylesheet" href="{{asset('assets/css/tom-select.css')}}" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
     .flash-message {
@@ -92,49 +93,9 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{route('admin.materiel.index')}}" aria-expanded="false">
                         <span>
-                        <i class="ti ti-asset"></i>
-                        </span>
-                        <span class="hide-menu">Matériels informatiques</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.produit.index')}}" aria-expanded="false">
-                        <span>
                         <i class="ti ti-package"></i>
                         </span>
-                        <span class="hide-menu">Produits</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.client.index')}}" aria-expanded="false">
-                        <span>
-                        <i class="ti ti-user"></i>
-                        </span>
-                        <span class="hide-menu">Client</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.commande.index')}}" aria-expanded="false">
-                        <span>
-                        <i class="ti ti-truck-delivery"></i>
-                        </span>
-                        <span class="hide-menu">Commande</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.categorie.index')}}" aria-expanded="false">
-                        <span>
-                        <i class="ti ti-category"></i>
-                        </span>
-                        <span class="hide-menu">Catégorie</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{route('admin.unite.index')}}" aria-expanded="false">
-                        <span>
-                        <i class="ti ti-cards"></i>
-                        </span>
-                        <span class="hide-menu">Unité</span>
+                        <span class="hide-menu">Matériels informatiques</span>
                     </a>
                 </li>
             </ul>

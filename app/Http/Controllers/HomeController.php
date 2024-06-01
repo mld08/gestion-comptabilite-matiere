@@ -3,25 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Commande;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function index(){
-        $commandes = Commande::all();
+        //$commandes = Commande::all();
 
         // Préparer les données pour le graphique
-        $montants = [];
+        /*$montants = [];
         $dates = [];
 
         foreach ($commandes as $commande) {
             $dates[] = $commande->date_commande;
             $montants[] = $commande->montant;
-        }
-        return view('home', [
-            "commandes" => Commande::orderBy('created_at', 'asc')->paginate(4),
-            'montants' => $montants,
-            'dates' => $dates
-        ]);
+        }*/
+        $data = DB::table('besoins')
+                    ->join('materiels', 'besoins.id', '=', 'materiels.id')
+                    ->join('matieres', 'materiels.id', '=', 'matieres.id')
+                    ->selectRaw('DATE(besoins.created_at) as date, COUNT(*) as count')
+                    ->groupBy(DB::raw('DATE(besoins.created_at)')) // Inclure la colonne dans la clause groupBy
+                    ->orderBy('date')
+                    ->get();
+        return view('home', ['data' => $data]);
     }
 }

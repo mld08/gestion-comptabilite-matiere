@@ -29,33 +29,27 @@ Route::get('/login', [AuthController::class, 'login'])->middleware('guest')->nam
 Route::post('/login', [AuthController::class, 'doLogin']);
 Route::delete('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 
-Route::name('admin.')->group(function () { //middleware('auth')->
+Route::name('admin.')->middleware('auth')->group(function () {
     /*Route::get('/', function () {
         return view('home', HomeController::class);
     })->name('home');*/
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::resource('produit', ProduitController::class)->except(['show']);
-    Route::resource('categorie', CategorieController::class)->except(['show']);
-    Route::resource('unite', UniteController::class)->except(['show']);
-    Route::resource('client', ClientController::class)->except(['show']);
-    Route::resource('commande', CommandeController::class)->except(['show']);
     Route::resource('carburant', CarburantController::class)->except(['show']);
     Route::resource('besoin', BesoinController::class)->except(['show']);
     Route::resource('compte', CompteController::class)->except(['show']);
     Route::resource('matiere', MatiereController::class)->except(['show']);
     Route::resource('materiel', MaterielController::class)->except(['show']);
+
+    //Exports
+    Route::get('/export-carburant', [CarburantController::class, 'export'])->name('export.carburant');
+    Route::get('/export-besoin', [BesoinController::class, 'export'])->name('export.besoin');
+    Route::get('/export-compte', [CompteController::class, 'export'])->name('export.compte');
+    Route::get('/export-matiere', [MatiereController::class, 'export'])->name('export.matiere');
+    Route::get('/export-materiel', [MaterielController::class, 'export'])->name('export.materiel');
 });
 
-Route::get('/export-commande', [CommandeController::class, 'export'])->name('export.commande');
-Route::get('/export-client', [ClientController::class, 'export'])->name('export.client');
-Route::get('/export-produit', [ProduitController::class, 'export'])->name('export.produit');
-Route::get('/export-categorie', [CategorieController::class, 'export'])->name('export.categorie');
-Route::get('/export-unite', [UniteController::class, 'export'])->name('export.unite');
-Route::get('/export-carburant', [CarburantController::class, 'export'])->name('export.carburant');
-Route::get('/export-besoin', [BesoinController::class, 'export'])->name('export.besoin');
-Route::get('/export-compte', [CompteController::class, 'export'])->name('export.compte');
-Route::get('/export-matiere', [MatiereController::class, 'export'])->name('export.matiere');
-Route::get('/export-materiel', [MaterielController::class, 'export'])->name('export.materiel');
+
+
 
 
 

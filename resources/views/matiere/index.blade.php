@@ -12,7 +12,7 @@
                         <a class="btn btn-primary" href="{{route('admin.matiere.create')}}">Ajouter une matiere</a>
                     </div>
                     <div class="col-lg-3 text-end">
-                        <a class="btn btn-success" href="{{route('export.matiere')}}">Exporter en Excel</a>
+                        <a class="btn btn-success" href="{{route('admin.export.matiere')}}">Exporter en Excel</a>
                     </div>
 
                 </div>

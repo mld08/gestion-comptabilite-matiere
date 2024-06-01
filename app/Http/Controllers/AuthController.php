@@ -11,9 +11,21 @@ class AuthController extends Controller
 {
     public function login(){
         /*User::create([
-            'name' => "Admin",
-            'email'=>"admin@gmail.com",
-            'password'=>bcrypt('Passer123'),
+            'name' => "bcm",
+            'email'=>"bcm@gmail.com",
+            'password'=>bcrypt('bcm2024'),
+        ], [
+            'name' => "user",
+            'email'=>"user@gmail.com",
+            'password'=>bcrypt('dir2024'),
+        ], [
+            'name' => "operateur1",
+            'email'=>"operateur1@gmail.com",
+            'password'=>bcrypt('op12024'),
+        ], [
+            'name' => "operateur2",
+            'email'=>"operateur2@gmail.com",
+            'password'=>bcrypt('op22024'),
         ]);*/
         return view('auth.login');
     }

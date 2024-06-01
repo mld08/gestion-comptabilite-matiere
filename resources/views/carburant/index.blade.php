@@ -12,7 +12,7 @@
                         <a class="btn btn-primary" href="{{route('admin.carburant.create')}}">Ajouter un carburant</a>
                     </div>
                     <div class="col-lg-3 text-end">
-                        <a class="btn btn-success" href="{{route('export.carburant')}}">Exporter en Excel</a>
+                        <a class="btn btn-success" href="{{route('admin.export.carburant')}}">Exporter en Excel</a>
                     </div>
 
                 </div>
